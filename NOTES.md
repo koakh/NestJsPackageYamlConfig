@@ -83,10 +83,14 @@ $ code nestjs-package-starter-consumer/package.json
 ### Init Git/Remote Repository
 
 ```shell
-$ touch README.md
+$ rm .git -R
+$ code README.md
 $ git init
 $ git add .
 $ git commit -am "first commit"
+$ git remote add origin https://github.com/koakh/NestJsPackageYamlConfig.git
+$ git branch -M main
+$ git push -u origin main
 ```
 
 ### Create remote repository NestJsPackageStarter
