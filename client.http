@@ -1,0 +1,26 @@
+@host = localhost
+@port = 3010
+
+@uriBase = http://{{host}}:{{port}}
+@uri = {{uriBase}}
+@contentType = application/json
+
+# model
+@auditId = 5ff84f8b93892a034c38bf37
+
+// @name getHello
+GET {{uri}} HTTP/1.1
+
+// @name createAudit
+POST {{uri}}/audit HTTP/1.1
+
+{
+	"action": "ACTION_SHELL_SERVICE_SYSTEM_SERVICE_UFW_STATUS",
+  "payload": {
+    "body": {
+      "cmd": "service",
+      "args": ["sshd", "status"]
+    }
+  },
+  "result": "OK"
+}
